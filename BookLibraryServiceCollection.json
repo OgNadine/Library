@@ -1,0 +1,159 @@
+{
+  "info": {
+    "name": "BookLibraryService",
+    "_postman_id": "abcd1234-5678-90ef-ghij-klmnopqrs9876",
+    "description": "Коллекция для тестирования микросервисного проекта",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Book Service",
+      "item": [
+        {
+          "name": "Get All Books",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8082/api/books",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8082",
+              "path": ["api", "books"]
+            }
+          }
+        },
+        {
+          "name": "Get Book By ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8082/api/books/:id",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8082",
+              "path": ["api", "books", ":id"]
+            }
+          }
+        },
+        {
+          "name": "Get Book By ISBN",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8082/api/books/isbn/:isbn",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8082",
+              "path": ["api", "books", "isbn", ":isbn"]
+            }
+          }
+        },
+        {
+          "name": "Add New Book",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n \"isbn\": \"978-3-16-148410-0\",\n \"title\": \"Название книги\",\n \"genre\": \"Жанр\",\n \"description\": \"Описание\",\n \"author\": \"Автор\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8082/api/books",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8082",
+              "path": ["api", "books"]
+            }
+          }
+        },
+        {
+          "name": "Update Book",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n \"isbn\": \"978-3-16-148410-0\",\n \"title\": \"Новое название книги\",\n \"genre\": \"Новый жанр\",\n \"description\": \"Новое описание\",\n \"author\": \"Новый автор\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8082/api/books/:id",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8082",
+              "path": ["api", "books", ":id"]
+            }
+          }
+        },
+        {
+          "name": "Delete Book",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8082/api/books/:id",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8082",
+              "path": ["api", "books", ":id"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Library Service",
+      "item": [
+        {
+          "name": "Get Available Books",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8081/library-service/books",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["api", "library-books", "available"]
+            }
+          }
+        },
+        {
+          "name": "Update Book Info",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n \"bookId\": 1,\n \"takenAt\": \"2024-11-13T00:00:00Z\",\n \"returnBy\": \"2024-12-13T00:00:00Z\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8081/library-service/books/:id",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["api", "library-books", ":id"]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

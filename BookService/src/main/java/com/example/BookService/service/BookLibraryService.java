@@ -21,7 +21,6 @@ public class BookLibraryService {
     }
 
     public void sendBookId(Long bookId) {
-        // Получаем URL сервиса LibraryService из Eureka
         String libraryServiceUrl = getLibraryServiceUrl();
 
         LibraryRecordRequest request = new LibraryRecordRequest(bookId, LocalDateTime.now(), LocalDateTime.now().plusDays(30));
@@ -37,7 +36,6 @@ public class BookLibraryService {
     }
 
     private String getLibraryServiceUrl() {
-        // Получаем экземпляр сервиса из Eureka
         String serviceId = "library-service"; // Имя сервиса, как оно зарегистрировано в Eureka
         String libraryServiceInstance = eurekaClient.getNextServerFromEureka(serviceId, false).getHomePageUrl();
         return libraryServiceInstance + "/api/library-books/register"; // Полный URL с эндпоинтом

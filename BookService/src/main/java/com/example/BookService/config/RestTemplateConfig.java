@@ -1,4 +1,4 @@
-package com.example.BookService;
+package com.example.BookService.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

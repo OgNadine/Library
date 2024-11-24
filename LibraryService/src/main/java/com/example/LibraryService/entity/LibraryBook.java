@@ -1,6 +1,7 @@
-package com.example.LibraryService;
+package com.example.LibraryService.entity;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 
 import java.time.LocalDateTime;
 

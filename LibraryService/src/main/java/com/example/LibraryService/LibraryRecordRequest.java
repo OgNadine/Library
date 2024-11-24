@@ -1,8 +1,9 @@
-package com.example.BookService;
+package com.example.LibraryService;
 
 import java.time.LocalDateTime;
 
 public class LibraryRecordRequest {
+
     private Long bookId;
     private LocalDateTime borrowedAt;
     private LocalDateTime dueAt;

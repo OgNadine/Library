@@ -47,11 +47,7 @@ public class LibraryBookController {
     }
     @PostMapping("/register")
     public ResponseEntity<Void> registerBook(@RequestBody LibraryRecordRequest request) {
-        LibraryBook libraryBook = new LibraryBook();
-        libraryBook.setId(request.getBookId());
-        libraryBook.setBorrowedAt(request.getBorrowedAt());
-        libraryBook.setDueAt(request.getDueAt());
-        libraryBookService.addBook(libraryBook);
-        return new ResponseEntity<>(HttpStatus.CREATED); // Возвращаем статус 201 Created
+        libraryBookService.addLibraryBookRecord(request);
+        return new ResponseEntity<>(HttpStatus.CREATED);
     }
 }

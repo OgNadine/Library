@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <compositeConfiguration>
+          <compositeBuild compositeDefinitionSource="SCRIPT">
+            <builds>
+              <build path="$PROJECT_DIR$/ApiGateway" name="ApiGateway">
+                <projects>
+                  <project path="$PROJECT_DIR$/ApiGateway" />
+                </projects>
+              </build>
+              <build path="$PROJECT_DIR$/BookService" name="BookService">
+                <projects>
+                  <project path="$PROJECT_DIR$/BookService" />
+                </projects>
+              </build>
+              <build path="$PROJECT_DIR$/eureka" name="eureka">
+                <projects>
+                  <project path="$PROJECT_DIR$/eureka" />
+                </projects>
+              </build>
+              <build path="$PROJECT_DIR$/LibraryService" name="LibraryService">
+                <projects>
+                  <project path="$PROJECT_DIR$/LibraryService" />
+                </projects>
+              </build>
+            </builds>
+          </compositeBuild>
+        </compositeConfiguration>
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleHome" value="" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/ApiGateway" />
+            <option value="$PROJECT_DIR$/BookService" />
+            <option value="$PROJECT_DIR$/LibraryService" />
+            <option value="$PROJECT_DIR$/eureka" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/ApiGateway" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/ApiGateway" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/BookService" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/BookService" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/LibraryService" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/LibraryService" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/eureka" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/eureka" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

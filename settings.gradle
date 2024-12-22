@@ -1,0 +1,5 @@
+rootProject.name = 'libr'
+includeBuild 'eureka'
+includeBuild 'ApiGateway'
+includeBuild 'BookService'
+includeBuild 'LibraryService'
